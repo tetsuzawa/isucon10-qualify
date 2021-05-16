@@ -10,6 +10,8 @@ import type { AppProps } from 'next/app'
 
 import 'leaflet/dist/leaflet.css'
 
+import usePageView from "../hooks/usePageVuew";
+
 const useStyles = makeStyles(() =>
   createStyles({
     container: {
@@ -24,6 +26,8 @@ const useStyles = makeStyles(() =>
 const MyApp: FC<AppProps> = props => {
   const { Component, pageProps } = props
   const classes = useStyles()
+
+  usePageView();
 
   useEffect(() => {
     // Remove the server-side injected CSS.
