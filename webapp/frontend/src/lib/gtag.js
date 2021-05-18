@@ -22,3 +22,15 @@ export const event = ({action, category, label, value = ""}) => {
     value,
   });
 };
+
+export const userTiming = ({name, value, eventCategory}) => {
+  if (!existsGaId) {
+    return;
+  }
+
+  window.gtag("event", "timing_complete", {
+    name: name,
+    value: value,
+    event_category: eventCategory,
+  });
+};

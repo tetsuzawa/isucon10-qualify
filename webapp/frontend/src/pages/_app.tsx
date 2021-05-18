@@ -10,7 +10,7 @@ import type { AppProps } from 'next/app'
 
 import 'leaflet/dist/leaflet.css'
 
-import usePageView from "../hooks/usePageVuew";
+import usePageView from "../hooks/usePageView";
 
 const useStyles = makeStyles(() =>
   createStyles({
